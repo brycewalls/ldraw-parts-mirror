@@ -1,0 +1,7 @@
+# Store part files byte-for-byte. LDraw .dat files are text, but geometry is
+# not the place to let a checkout rewrite line endings: the tool hashes and
+# parses these, and a CRLF round-trip on one machine and not another is the
+# kind of difference that shows up as a rendering bug and gets blamed on the
+# renderer.
+* -text
+*.dat binary
